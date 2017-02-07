@@ -25,11 +25,13 @@
     "no-param-reassign": "warn",
     "react/react-in-jsx-scope": "warn",
     "no-underscore-dangle": "warn",
-    "global-require": "warn",
+    "global-require": "off",
     "react/prop-types": "warn",
     "react/jsx-first-prop-new-line": "warn",
     "guard-for-in": "off",
     "no-restricted-syntax": ["error", "WithStatement"],
-    "react/forbid-prop-types": "off"
+    "react/forbid-prop-types": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/no-static-element-interactions": "off"
   }
 }
