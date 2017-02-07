@@ -1,2 +1,2 @@
-# lsk-general
-Lego Starter Kit / General blocks
+# lsk-admin
+Lego Starter Kit / Admin Blocks Panel
