@@ -24,7 +24,11 @@
     "validate.js": "^0.11.1"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.35.3",
+    "@kadira/react-storybook-addon-info": "^3.3.0",
+    "@kadira/react-storybook-decorator-centered": "^1.0.0",
+    "@kadira/storybook": "2.5.1",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
+    "@kadira/storybook-addon-options": "^1.0.1",
     "babel-cli": "6.9.0",
     "babel-core": "6.9.0",
     "babel-eslint": "7.1.1",
@@ -59,6 +63,9 @@
     "path": "^0.12.7",
     "postcss-loader": "1.2.2",
     "react-hot-loader": "3.0.0-beta.6",
+    "react-storybook-addon-backgrounds": "^0.0.7",
+    "react-storybook-decorator-background": "^1.0.5",
+    "storybook-host": "^1.0.14",
     "webpack": "1.13.2",
     "webpack-hot-middleware": "2.15.0",
     "webpack-middleware": "1.5.1"
@@ -71,7 +78,8 @@
     "deploy": "babel-node tools/run deploy",
     "render": "babel-node tools/run render",
     "start": "node build/server.js",
-    "dev": "start-storybook -p 9001",
-    "storybook": "start-storybook -p 9001"
+    "dev": "npm run storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out"
   }
 }

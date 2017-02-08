@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-import s from './StyleWrapper.css';
-
 export default class StyleWrapper extends Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
@@ -11,10 +9,8 @@ export default class StyleWrapper extends Component {
     insertCss: PropTypes.func.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-
-    this.insertCss = styles => styles._insertCss();
+  insertCss = (styles) => {
+    return styles._insertCss();
   }
 
   getChildContext() {
@@ -23,15 +19,7 @@ export default class StyleWrapper extends Component {
     };
   }
 
-  componentWillMount() {
-    this.removeCss = this.insertCss(s);
-  }
-
-  componentWillUnmount() {
-    this.removeCss();
-  }
-
   render() {
-    return this.props.children
+    return this.props.children;
   }
 }
