@@ -36,11 +36,11 @@ addDecorator(story => (
   </StyleWrapper>
   // </div>
 ));
-addDecorator(backgrounds([
-  { name: 'twitter', value: '#00aced', default: true },
-  { name: 'facebook', value: '#3b5998' },
-]));
-// addDecorator(backgroundColor(['#ffffff', '#000000']));
+// addDecorator(backgrounds([
+//   { name: 'twitter', value: '#00aced', default: true },
+//   { name: 'facebook', value: '#3b5998' },
+// ]));
+// // addDecorator(backgroundColor(['#ffffff', '#000000']));
 // addDecorator(host({
 //   title: 'A host container for components under test.',
 //   align: 'center middle',

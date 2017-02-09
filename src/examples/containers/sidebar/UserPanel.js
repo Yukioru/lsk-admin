@@ -1,4 +1,5 @@
 import React from 'react';
+import CircleIcon from 'react-icons/lib/fa/circle';
 
 import UserPanel from '../../../lib/sidebar/UserPanel';
 
@@ -10,9 +11,10 @@ const user = {
   isOnline: true,
 };
 
+
 export default function () {
-  const onlineIcon = 'fa fa-circle text-success';
-  const offlineIcon = 'fa fa-circle text-danger';
+  const onlineIcon = <i className="text-success"><CircleIcon /></i>;
+  const offlineIcon = <i className="text-danger"><CircleIcon /></i>;
   const statusIcon = user.isOnline ? onlineIcon : offlineIcon;
   const statusText = user.isOnline ? 'Online' : 'Offline';
   return (

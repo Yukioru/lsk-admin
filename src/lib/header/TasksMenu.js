@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import TasksMenuItem from './TasksMenuItem';
+import FlagIcon from 'react-icons/lib/fa/flag';
 
 const propTypes = {
   items: PropTypes.array,
@@ -21,7 +22,7 @@ function TasksMenu({ items, onItemClick, onFooterClick }) {
         data-toggle="dropdown"
         style={{ cursor: 'pointer' }}
       >
-        <i className="fa fa-flag-o"></i>
+        <FlagIcon />
         <span className="label label-danger">{count}</span>
       </a>
       <ul className="dropdown-menu">

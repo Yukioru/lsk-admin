@@ -1,8 +1,12 @@
 import React from 'react';
+import MinusIcon from 'react-icons/lib/fa/minus';
+import CloseIcon from 'react-icons/lib/fa/close';
+
 import PageWrapper from '../../../lib/page/PageWrapper';
 import PageHeader from '../../../lib/page/PageHeader';
 import Breadcrumb from '../../../lib/page/Breadcrumb';
 import PageContent from '../../../lib/page/PageContent';
+
 
 export default function BlankPage() {
   return (
@@ -25,10 +29,10 @@ export default function BlankPage() {
             <h3 className="box-title">Title</h3>
             <div className="box-tools pull-right">
               <button type="button" className="btn btn-box-tool">
-                <i className="fa fa-minus"></i>
+                <MinusIcon />
               </button>
               <button type="button" className="btn btn-box-tool">
-                <i className="fa fa-times"></i>
+                <CloseIcon />
               </button>
             </div>
           </div>

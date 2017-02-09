@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+import BarsIcon from 'react-icons/lib/fa/bars';
+import SlidersIcon from 'react-icons/lib/fa/sliders';
 
 const propTypes = {
   controlbarIcon: PropTypes.node,
@@ -6,8 +8,16 @@ const propTypes = {
 };
 
 const defaultProps = {
-  controlbarIcon: 'fa fa-gears',
+  controlbarIcon: <SlidersIcon />,
 };
+
+function renderIcon(icon) {
+  if (typeof icon === 'string') {
+    return <i className={icon} />;
+  }
+  return icon;
+}
+
 
 function Navbar({ controlbarIcon, children }) {
   return (
@@ -19,16 +29,14 @@ function Navbar({ controlbarIcon, children }) {
         style={{ cursor: 'pointer' }}
       >
         <span className="sr-only">Toggle navigation</span>
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
+        <BarsIcon />
       </a>
       <div className="navbar-custom-menu">
         <ul className="nav navbar-nav">
           {children}
           <li>
             <a data-toggle="control-sidebar" style={{ cursor: 'pointer' }}>
-              <i className={controlbarIcon}></i>
+              {renderIcon(controlbarIcon)}
             </a>
           </li>
         </ul>

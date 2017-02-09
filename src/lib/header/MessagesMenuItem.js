@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ClockIcon from 'react-icons/lib/fa/clock-o';
 
 const propTypes = {
   image: PropTypes.string,
@@ -26,7 +27,7 @@ function MessagesMenuItem({ image, name, timestamp, children, onClick }) {
         </div>
         <h4>
           {name}
-          <small><i className="fa fa-clock-o"></i> {timestamp}</small>
+          <small><ClockIcon /> {timestamp}</small>
         </h4>
         <p>{children}</p>
       </a>

@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import BellIcon from 'react-icons/lib/fa/bell';
 
 import NotificationsMenuItem from './NotificationsMenuItem';
 
@@ -21,7 +22,7 @@ function NotificationsMenu({ items, onItemClick, onFooterClick }) {
         data-toggle="dropdown"
         style={{ cursor: 'pointer' }}
       >
-        <i className="fa fa-bell-o"></i>
+        <BellIcon />
         <span className="label label-warning">{count}</span>
       </a>
       <ul className="dropdown-menu">

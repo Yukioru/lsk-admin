@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
+import MinusIcon from 'react-icons/lib/fa/minus';
+import CloseIcon from 'react-icons/lib/fa/close';
+import PlusIcon from 'react-icons/lib/fa/plus';
+
 const propTypes = {
   title: PropTypes.string,
   status: PropTypes.string,
@@ -40,8 +44,8 @@ class Box extends Component {
           data-widget="collapse"
         >
           {this.props.collapsed
-            ? <i className="fa fa-plus" />
-            : <i className="fa fa-minus" />
+            ? <PlusIcon />
+            : <MinusIcon />
           }
         </button>
       );
@@ -57,7 +61,7 @@ class Box extends Component {
           className="btn btn-box-tool"
           data-widget="remove"
         >
-          <i className="fa fa-times" />
+          <CloseIcon />
         </button>
       );
     }

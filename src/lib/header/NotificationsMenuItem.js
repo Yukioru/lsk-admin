@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import GroupIcon from 'react-icons/lib/fa/group';
 
 const propTypes = {
   icon: PropTypes.string,
@@ -8,15 +9,22 @@ const propTypes = {
 };
 
 const defaultProps = {
-  icon: 'fa fa-users',
+  icon: <GroupIcon />,
   iconColor: 'aqua',
 };
+
+function renderIcon(icon) {
+  if (typeof icon === 'string') {
+    return <i className={icon} />;
+  }
+  return icon;
+}
 
 function NotificationsMenuItem({ icon, iconColor, children, onClick }) {
   return (
     <li>
       <a style={{ cursor: 'pointer' }} onClick={onClick}>
-        <i className={`${icon} text-${iconColor}`}></i> {children}
+        <i className={`text-${iconColor}`}>{renderIcon(icon)}</i> {children}
       </a>
     </li>
   );

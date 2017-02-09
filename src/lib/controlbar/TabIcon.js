@@ -2,14 +2,21 @@ import React, { PropTypes } from 'react';
 
 const propTypes = {
   href: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
+
+function renderIcon(icon) {
+  if (typeof icon === 'string') {
+    return <i className={icon} />;
+  }
+  return icon;
+}
 
 function TabIcon({ href, icon }) {
   return (
     <li>
       <a href={href} data-toggle="tab">
-        <i className={icon}></i>
+        {renderIcon(icon)}
       </a>
     </li>
   );

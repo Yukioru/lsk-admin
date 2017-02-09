@@ -1,4 +1,7 @@
 import React from 'react';
+import MinusIcon from 'react-icons/lib/fa/minus';
+import CloseIcon from 'react-icons/lib/fa/close';
+
 
 export default function Calendar() {
   return (
@@ -27,14 +30,14 @@ export default function Calendar() {
             className="btn btn-success btn-sm"
             data-widget="collapse"
           >
-            <i className="fa fa-minus"></i>
+            <MinusIcon />
           </button>
           <button
             type="button"
             className="btn btn-success btn-sm"
             data-widget="remove"
           >
-            <i className="fa fa-times"></i>
+            <CloseIcon />
           </button>
         </div>
       </div>

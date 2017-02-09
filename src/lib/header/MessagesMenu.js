@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import MessagesMenuItem from './MessagesMenuItem';
+import EnvelopeIcon from 'react-icons/lib/fa/envelope';
 
 const propTypes = {
   items: PropTypes.array,
@@ -21,7 +22,7 @@ function MessagesMenu({ items, onItemClick, onFooterClick }) {
         data-toggle="dropdown"
         style={{ cursor: 'pointer' }}
       >
-        <i className="fa fa-envelope-o"></i>
+        <EnvelopeIcon />
         <span className="label label-success">{count}</span>
       </a>
       <ul className="dropdown-menu">
@@ -34,7 +35,7 @@ function MessagesMenu({ items, onItemClick, onFooterClick }) {
                 onClick={() => onItemClick(item)}
               >
                 {item.text}
-              </MessagesMenuItem>
+              </MessagesMenuItem>,
             )}
           </ul>
         </li>
