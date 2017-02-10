@@ -10,6 +10,19 @@ import StyleWrapper from './StyleWrapper';
 import StoryWrapper from './StoryWrapper';
 
 
+import React, { Component } from 'react';
+import importcss from 'importcss';
+@importcss(require('../../src/Admin/sass/AdminLTE.igscss'))
+class LayoutStyles extends Component {
+  render() {
+    return this.props.children;
+  }
+}
+addDecorator(story => (
+  <LayoutStyles>
+    {story()}
+  </LayoutStyles>
+));
 import { host } from 'storybook-host';
 
 
@@ -30,8 +43,10 @@ addDecorator(knob.withKnobs);
 addDecorator(story => (
   // <div>
   <StyleWrapper>
+    <LayoutStyles>
     {/* <StoryWrapper> */}
-    {story()}
+      {story()}
+    </LayoutStyles>
     {/* </StoryWrapper> */}
   </StyleWrapper>
   // </div>
@@ -72,4 +87,4 @@ function wrapModules(stories, module) {
   }, module);
 }
 
-export { configure, storybook, wrapModule, wrapModules };
+export { configure, storybook, wrapModule, wrapModules, addDecorator };

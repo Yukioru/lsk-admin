@@ -77,7 +77,7 @@ const notifications = [
 
 function onItemClick(item) {
   // eslint-disable-next-line no-alert
-  alert(`item ${item.id} clicked`);
+  alert(`item ${item.id} clicked`); // eslint-disable-line
 }
 
 function onFooterClick() {

@@ -2,8 +2,9 @@ import React from 'react';
 
 import FooterWrapper from '../../../lib/footer/FooterWrapper';
 
-export default function Footer() {
-  return (
+module.exports = ({ storiesOf, action }) => (
+  storiesOf('admin.layout', module)
+  .add('FooterWrapper', () => (
     <FooterWrapper>
       <div className="pull-right hidden-xs">
         <b>Version</b> 2.3.5
@@ -13,5 +14,5 @@ export default function Footer() {
         <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.
       </strong> All rights reserved.
     </FooterWrapper>
-  );
-}
+  ))
+);

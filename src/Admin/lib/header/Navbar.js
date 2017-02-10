@@ -9,6 +9,7 @@ const propTypes = {
 
 const defaultProps = {
   controlbarIcon: <SlidersIcon />,
+  controlbar: true,
 };
 
 function renderIcon(icon) {
@@ -19,7 +20,7 @@ function renderIcon(icon) {
 }
 
 
-function Navbar({ controlbarIcon, children }) {
+function Navbar({ controlbarIcon, children, controlbar }) {
   return (
     <nav className="navbar navbar-static-top" role="navigation">
       <a
@@ -34,11 +35,13 @@ function Navbar({ controlbarIcon, children }) {
       <div className="navbar-custom-menu">
         <ul className="nav navbar-nav">
           {children}
-          <li>
-            <a data-toggle="control-sidebar" style={{ cursor: 'pointer' }}>
-              {renderIcon(controlbarIcon)}
-            </a>
-          </li>
+          <If condition={controlbar}>
+            <li>
+              <a data-toggle="control-sidebar" style={{ cursor: 'pointer' }}>
+                {renderIcon(controlbarIcon)}
+              </a>
+            </li>
+          </If>
         </ul>
       </div>
     </nav>

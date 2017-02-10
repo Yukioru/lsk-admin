@@ -11,8 +11,10 @@ import NotificationsMenu from '../../containers/header/NotificationsMenu';
 import TasksMenu from '../../containers/header/TasksMenu';
 import UserMenu from '../../containers/header/UserMenu';
 
-export default function Header() {
-  return (
+
+module.exports = ({ storiesOf, action }) => (
+  storiesOf('admin.layout', module)
+  .add('HeaderWrapper', () => (
     <HeaderWrapper>
       <Logo>
         <MiniLogo>
@@ -29,5 +31,5 @@ export default function Header() {
         <UserMenu />
       </Navbar>
     </HeaderWrapper>
-  );
-}
+  ))
+);

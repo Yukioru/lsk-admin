@@ -11,11 +11,11 @@ class Styles extends Component {
 }
 
 
-storiesOf('Button', module)
-  .add('with text', () => <Styles><button>Click me</button></Styles>)
-  .add('red text', () => <Styles><button className="red">Click me</button></Styles>);
+storiesOf('Demo scss', module)
+  .add('default', () => <Styles><button>Click me</button></Styles>)
+  .add('red', () => <Styles><button className="red">Click me</button></Styles>);
 
-storiesOf('demo.button', module)
+storiesOf('dot.filter.example', module)
   .add('with text', () => (
     <button onClick={action('clicked')}>Hello Button</button>
   ))
@@ -23,7 +23,7 @@ storiesOf('demo.button', module)
     <button onClick={action('clicked')}>😀 😎 👍 💯</button>
   ));
 
-storiesOf('other.a', module)
+storiesOf('dot.filter.other', module)
   .add('with text', () => (
     <a onClick={action('clicked')}>Hello Button</a>
   ))
@@ -31,8 +31,16 @@ storiesOf('other.a', module)
     <a onClick={action('clicked')}>😀 😎 👍 💯</a>
   ));
 
+storiesOf('addWithInfo', module)
+  .addWithInfo('with text', () => (
+    <a onClick={action('clicked')}>Hello Button</a>
+  ))
+  .addWithInfo('with some emoji', () => (
+    <a onClick={action('clicked')}>😀 😎 👍 💯</a>
+  ));
 
-storiesOf('Storybook Knobs', module)
+
+storiesOf('Knobs', module)
   .add('with a button', () => (
     <button
       disabled={boolean('Disabled', false)}

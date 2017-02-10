@@ -17,19 +17,15 @@ const propTypes = {
 require('../../../sass/AdminLTE.g.scss');
 
 export default function Layout({ children }) {
-  if (typeof window !== 'undefined') {
-    window.$ = require('jquery');
-    return (
-      <LayoutWrapper color="black">
-        <Header />
-        <Sidebar />
-        {children}
-        <Footer />
-        <Controlbar />
-      </LayoutWrapper>
-    );
-  }
-  return false
+  return (
+    <LayoutWrapper color="black">
+      <Header />
+      <Sidebar />
+      {children}
+      <Footer />
+      <Controlbar />
+    </LayoutWrapper>
+  );
 }
 
 Layout.propTypes = propTypes;

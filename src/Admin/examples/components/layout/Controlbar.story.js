@@ -6,8 +6,9 @@ import TabIcon from '../../../lib/controlbar/TabIcon';
 import TabContent from '../../../lib/controlbar/TabContent';
 import TabPane from '../../../lib/controlbar/TabPane';
 
-export default function Footer() {
-  return (
+module.exports = ({ storiesOf, action }) => (
+  storiesOf('admin.layout', module)
+  .add('ControlbarWrapper', () => (
     <ControlbarWrapper>
       <TabHeader>
         <TabIcon href="#control-sidebar-home-tab" icon="fa fa-home" />
@@ -19,7 +20,7 @@ export default function Footer() {
           <ul className="control-sidebar-menu">
             <li>
               <a href="">
-                <i className="menu-icon fa fa-birthday-cake bg-red"></i>
+                <i className="menu-icon fa fa-birthday-cake bg-red" />
                 <div className="menu-info">
                   <h4 className="control-sidebar-subheading">
                     Langdon's Birthday
@@ -30,7 +31,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="">
-                <i className="menu-icon fa fa-user bg-yellow"></i>
+                <i className="menu-icon fa fa-user bg-yellow" />
                 <div className="menu-info">
                   <h4 className="control-sidebar-subheading">
                     Frodo Updated His Profile
@@ -41,7 +42,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="">
-                <i className="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                <i className="menu-icon fa fa-envelope-o bg-light-blue" />
                 <div className="menu-info">
                   <h4 className="control-sidebar-subheading">
                     Nora Joined Mailing List
@@ -52,7 +53,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="">
-                <i className="menu-icon fa fa-file-code-o bg-green"></i>
+                <i className="menu-icon fa fa-file-code-o bg-green" />
                 <div className="menu-info">
                   <h4 className="control-sidebar-subheading">
                     Cron Job 254 Executed
@@ -179,7 +180,7 @@ export default function Footer() {
               <label className="control-sidebar-subheading">
                 Delete chat history
                 <a href="" className="text-red pull-right">
-                  <i className="fa fa-trash-o"></i>
+                  <i className="fa fa-trash-o" />
                 </a>
               </label>
             </div>
@@ -187,5 +188,5 @@ export default function Footer() {
         </TabPane>
       </TabContent>
     </ControlbarWrapper>
-  );
-}
+  ))
+);
