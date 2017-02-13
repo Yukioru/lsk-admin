@@ -2,11 +2,12 @@ import React, { PropTypes } from 'react';
 
 const propTypes = {
   children: PropTypes.node,
+  onClick: PropTypes.func,
 };
 
-function MiniLogo({ children }) {
+function MiniLogo({ children, onClick }) {
   return (
-    <span className="logo-mini">
+    <span className="logo-mini" onClick={onClick}>
       {children}
     </span>
   );

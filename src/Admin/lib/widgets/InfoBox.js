@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
 const propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
   text: PropTypes.string,
   count: PropTypes.string,
   countSign: PropTypes.string,
@@ -10,6 +10,13 @@ const propTypes = {
   progressText: PropTypes.string,
   color: PropTypes.string,
 };
+
+function renderIcon(icon) {
+  if (typeof icon === 'string') {
+    return <i className={icon} />;
+  }
+  return icon;
+}
 
 class InfoBox extends Component {
   getBoxClasses() {
@@ -51,7 +58,7 @@ class InfoBox extends Component {
     return (
       <div className={this.getBoxClasses()}>
         <span className={this.getIconClasses()}>
-          <i className={this.props.icon} />
+          {renderIcon(this.props.icon)}
         </span>
 
         <div className="info-box-content">

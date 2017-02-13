@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-
+import ArrowLeft from 'react-icons/lib/fa/angle-left';
 import TreeSubMenu from './TreeSubMenu';
 
 const propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
   iconColor: PropTypes.string,
   title: PropTypes.string,
   label: PropTypes.string,
@@ -19,6 +19,13 @@ const defaultProps = {
   showLabel: true,
   items: [],
 };
+
+function renderIcon(icon) {
+  if (typeof icon === 'string') {
+    return <i className={icon} />;
+  }
+  return icon;
+}
 
 class TreeMenu extends Component {
   constructor(props) {
@@ -56,17 +63,19 @@ class TreeMenu extends Component {
         </small>
       );
     }
-    return <i className="fa fa-angle-left pull-right"></i>;
+    return <i className="pull-right"><ArrowLeft /></i>;
   }
 
   renderLink() {
     return (
       <a style={{ cursor: 'pointer' }} onClick={this.props.onClick}>
-        <i className={`${this.props.icon} text-${this.props.iconColor}`} />
-        <span> {this.props.title} </span>
+        <i className={`text-${this.props.iconColor}`}>
+          {renderIcon(this.props.icon)}
+        </i>
         <span className="pull-right-container">
           {this.renderLabel()}
         </span>
+        <span> {this.props.title} </span>
       </a>
     );
   }

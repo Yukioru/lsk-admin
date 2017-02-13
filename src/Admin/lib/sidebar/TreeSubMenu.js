@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 const propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
   showIcon: PropTypes.bool,
   title: PropTypes.string,
   items: PropTypes.array,
@@ -16,6 +16,13 @@ const defaultProps = {
   isSelected: false,
   items: [],
 };
+
+function renderIcon(icon) {
+  if (typeof icon === 'string') {
+    return <i className={icon} />;
+  }
+  return icon;
+}
 
 class TreeSubMenu extends Component {
   constructor(props) {
@@ -46,7 +53,7 @@ class TreeSubMenu extends Component {
       <li className={this.props.isSelected ? 'active' : ''}>
         <a style={{ cursor: 'pointer' }} onClick={this.props.onClick}>
           {this.props.showIcon
-            ? <i className={this.props.icon}></i>
+            ? renderIcon(this.props.icon)
             : ''
           }
           <span> {this.props.title} </span>

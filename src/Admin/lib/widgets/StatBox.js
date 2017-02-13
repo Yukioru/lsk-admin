@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+import Right from 'react-icons/lib/fa/arrow-circle-right';
+import A from 'lsk-general/General/A';
 
 const propTypes = {
   count: PropTypes.string,
@@ -9,6 +11,13 @@ const propTypes = {
   urlText: PropTypes.string,
   color: PropTypes.string,
 };
+
+function renderIcon(icon) {
+  if (typeof icon === 'string') {
+    return <i className={icon} />;
+  }
+  return icon;
+}
 
 function StatBox({
   count, countSign, title,
@@ -24,11 +33,11 @@ function StatBox({
         <p>{title}</p>
       </div>
       <div className="icon">
-        <i className={iconClasses}></i>
+        {renderIcon(iconClasses)}
       </div>
-      <a href={url} className="small-box-footer">
-        {urlText} <i className="fa fa-arrow-circle-right"></i>
-      </a>
+      <A href={url} className="small-box-footer">
+        {urlText} <Right />
+      </A>
     </div>
   );
 }
