@@ -14,6 +14,8 @@
 // @import "han-custom";
 // @import "../../node_modules/han-css/index";
 */
+
+
 @import "bootstrap-custom";
 // @import "font-awesome-custom";
 @import "../../../node_modules/animate-sass/animate";
@@ -66,3 +68,9 @@
 @import "miscellaneous";
 @import "print";
 @import "skins/skin-black";
+
+
+.navbar-nav > li > a {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}

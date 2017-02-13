@@ -1,13 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import FastClick from 'fastclick';
 import $ from 'jquery';
-
 global.$ = $;
 global.jQuery = $;
-
 require('./jquery-ui.min');
-
 window.$.widget.bridge('uibutton', window.$.ui.button);
 require('admin-lte/bootstrap/js/bootstrap.min');
 require('admin-lte/plugins/sparkline/jquery.sparkline.min');
@@ -20,7 +16,6 @@ require('admin-lte/plugins/datepicker/bootstrap-datepicker');
 require('admin-lte/plugins/slimScroll/jquery.slimscroll.min');
 require('admin-lte/dist/js/app.min');
 
-FastClick.attach(document.body);
 
 const propTypes = {
   color: PropTypes.string,
@@ -35,7 +30,6 @@ const defaultProps = {
 
 class LayoutWrapper extends Component {
   componentWillMount() {
-    global.kek = 'kek2ß';
     const classnames = classNames(
       { 'hold-transition': this.props.fixed },
       `skin-${this.props.color}`,
