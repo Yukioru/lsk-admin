@@ -19,6 +19,7 @@ import FooterWrapper from './lib/footer/FooterWrapper';
 
 module.exports = ({ storiesOf, action }) => (
   storiesOf('Admin', module)
+  .addStyle(require('./sass/AdminLTE.g.scss'))
   .add('Layout2', () => (
     <LayoutWrapper color="black">
       <HeaderWrapper>
