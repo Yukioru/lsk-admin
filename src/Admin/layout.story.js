@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import importcss from 'importcss';
 
 import HomeIcon from 'react-icons/lib/fa/home';
 import SlidersIcon from 'react-icons/lib/fa/sliders';
@@ -36,9 +35,9 @@ import TabPane from './lib/controlbar/TabPane';
 
 const noAvatar = 'https://remont3.ru/templates/umedia/dleimages/noavatar.png';
 
-
 module.exports = ({ storiesOf, action }) => (
   storiesOf('Admin', module)
+  .addStyle(require('./sass/AdminLTE.g.scss'))
   .add('Layout', () => (
     <LayoutWrapper color="black">
       <HeaderWrapper>
