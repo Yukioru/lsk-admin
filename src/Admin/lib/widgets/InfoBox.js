@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
 const propTypes = {
-  icon: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   text: PropTypes.string,
   count: PropTypes.string,
   countSign: PropTypes.string,

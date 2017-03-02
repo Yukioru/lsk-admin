@@ -6,7 +6,7 @@ const propTypes = {
   count: PropTypes.string,
   countSign: PropTypes.string,
   title: PropTypes.string,
-  iconClasses: PropTypes.string,
+  iconClasses: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   url: PropTypes.string,
   urlText: PropTypes.string,
   color: PropTypes.string,

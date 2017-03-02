@@ -3,7 +3,7 @@ import ArrowLeft from 'react-icons/lib/fa/angle-left';
 import TreeSubMenu from './TreeSubMenu';
 
 const propTypes = {
-  icon: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   iconColor: PropTypes.string,
   title: PropTypes.string,
   label: PropTypes.string,
