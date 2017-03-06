@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import Link from 'lsk-general/General/Link';
 
 const propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
@@ -18,7 +19,7 @@ function BreadcrumbItem({ icon, title, url }) {
   return (
     <li className={classNames({ active: !url })}>
       {url
-        ? <a href={url}>{icon ? renderIcon(icon) : ''} {title}</a>
+        ? <Link href={url}>{icon ? renderIcon(icon) : ''} {title}</Link>
         : title
       }
     </li>

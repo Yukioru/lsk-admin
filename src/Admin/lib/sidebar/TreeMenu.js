@@ -6,7 +6,7 @@ const propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   iconColor: PropTypes.string,
   title: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   labelColor: PropTypes.string,
   showLabel: PropTypes.bool,
   items: PropTypes.array,
@@ -91,7 +91,7 @@ class TreeMenu extends Component {
                 {...item}
                 isSelected={isSelected}
                 onClick={() => this.props.onItemClick(item)}
-                onItemClick={this.props.onItemClick}
+                onItemClick={() => this.props.onItemClick(item)}
               />
             );
           })}

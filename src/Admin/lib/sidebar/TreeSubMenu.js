@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 const propTypes = {
-  icon: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   showIcon: PropTypes.bool,
   title: PropTypes.string,
   items: PropTypes.array,

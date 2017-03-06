@@ -134,6 +134,11 @@
     }
   }
   //Sidebar Menu. First level links
+  .sidebar-menu > li > a > i {
+    position: relative;
+    top: -2px;
+    padding-right: 10px;
+  }
   .sidebar-menu > li {
     //Section Headning
     &.header {
