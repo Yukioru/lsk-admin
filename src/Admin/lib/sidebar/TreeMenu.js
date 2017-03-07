@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ArrowLeft from 'react-icons/lib/fa/angle-left';
 import TreeSubMenu from './TreeSubMenu';
+import cx from 'classnames';
 
 const propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
@@ -12,6 +13,7 @@ const propTypes = {
   items: PropTypes.array,
   onClick: PropTypes.func,
   onItemClick: PropTypes.func,
+  isSelected: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -32,6 +34,7 @@ class TreeMenu extends Component {
     super(props);
     this.state = {
       selectedMenuId: null,
+      selectedLinkId: null,
     };
     this.renderLabel = this.renderLabel.bind(this);
     this.renderLink = this.renderLink.bind(this);
@@ -42,6 +45,7 @@ class TreeMenu extends Component {
     this.setState({
       selectedMenuId: menu.id,
     });
+    this.props.onItemClick(menu);
   }
 
   renderLabel() {
@@ -90,8 +94,8 @@ class TreeMenu extends Component {
               <TreeSubMenu
                 {...item}
                 isSelected={isSelected}
-                onClick={() => this.props.onItemClick(item)}
-                onItemClick={() => this.props.onItemClick(item)}
+                onClick={() => this.handleMenuClick(item)}
+                onItemClick={() => this.handleMenuClick(item)}
               />
             );
           })}
@@ -104,7 +108,12 @@ class TreeMenu extends Component {
 
   render() {
     return (
-      <li className="treeview">
+      <li
+        className={cx({
+          treeview: true,
+          active: this.props.isSelected,
+        })}
+      >
         {this.renderLink()}
         {this.renderItems()}
       </li>
