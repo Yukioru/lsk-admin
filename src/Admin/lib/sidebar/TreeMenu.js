@@ -88,10 +88,12 @@ class TreeMenu extends Component {
     if (this.props.items.length > 0) {
       return (
         <ul className="treeview-menu">
-          {this.props.items.map((item) => {
+          {this.props.items.map((item, i) => {
+            item.id = i + 1;
             const isSelected = item.id === this.state.selectedMenuId;
             return (
               <TreeSubMenu
+                key={i}
                 {...item}
                 isSelected={isSelected}
                 onClick={() => this.handleMenuClick(item)}
