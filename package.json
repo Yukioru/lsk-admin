@@ -1,6 +1,6 @@
 {
   "name": "lsk-admin",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "yukioru",
   "license": "MIT",
   "dependencies": {
@@ -25,6 +25,9 @@
     "react-icons": "2.2.3",
     "sass-loader": "5.0.0",
     "validate.js": "0.11.1"
+  },
+  "peerDependencies": {
+    "lsk-general": "0.6.9"
   },
   "devDependencies": {
     "@kadira/storybook": "2.35.3",

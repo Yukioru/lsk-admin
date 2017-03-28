@@ -2077,7 +2077,7 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
-core-decorators@0.15.0:
+core-decorators@0.15.0, core-decorators@^0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/core-decorators/-/core-decorators-0.15.0.tgz#e5a58ff7ed48b9d2ef42262fd9550cddde18a819"
 
@@ -3353,7 +3353,7 @@ he@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-highlight.js@9.8.0:
+highlight.js@9.8.0, highlight.js@^9.8.0:
   version "9.8.0"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.8.0.tgz#38eeef40cd45eaddbec8c9e5238fb7a783a3b685"
 
@@ -3451,7 +3451,7 @@ immutable@3.8.1, immutable@^3.7.6, immutable@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
 
-importcss@1.0.3:
+importcss@1.0.3, importcss@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/importcss/-/importcss-1.0.3.tgz#7aebe666766e05be2d3d880966f0b42dc26a6ad5"
   dependencies:
@@ -4354,6 +4354,23 @@ lsk-build@^0.6.0:
     webpack-hot-middleware "^2.16.1"
     webpack-middleware "^1.5.1"
 
+lsk-general@^0.6.9:
+  version "0.6.9"
+  resolved "https://registry.yarnpkg.com/lsk-general/-/lsk-general-0.6.9.tgz#24325f71a49793498595793f2873868094931e00"
+  dependencies:
+    core-decorators "^0.15.0"
+    glob-loader "0.3.0"
+    highlight.js "^9.8.0"
+    importcss "^1.0.3"
+    markdown-it "^8.1.0"
+    markdown-it-emoji "^1.3.0"
+    react "^15.4.2"
+    react-bootstrap "^0.30.7"
+    react-dom "^15.4.2"
+    react-drive-in "^1.7.3"
+    react-icons "^2.2.3"
+    validate.js "^0.11.1"
+
 macaddress@^0.2.8:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/macaddress/-/macaddress-0.2.8.tgz#5904dc537c39ec6dbefeae902327135fa8511f12"
@@ -4392,11 +4409,11 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-markdown-it-emoji@1.3.0:
+markdown-it-emoji@1.3.0, markdown-it-emoji@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.3.0.tgz#903ae1a9968c3f17d4e142f115d4ec575e56d2cb"
 
-markdown-it@8.1.0:
+markdown-it@8.1.0, markdown-it@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.1.0.tgz#38902d4e7bac2260c073eb67be623211fbb2c2e3"
   dependencies:
@@ -5749,7 +5766,7 @@ react-addons-create-fragment@^15.3.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-bootstrap@0.30.7:
+react-bootstrap@0.30.7, react-bootstrap@^0.30.7:
   version "0.30.7"
   resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-0.30.7.tgz#39da80088693ecb71e8e63b5bdc313571fd993d1"
   dependencies:
@@ -5803,7 +5820,7 @@ react-docgen@^2.12.1:
     node-dir "^0.1.10"
     recast "^0.11.5"
 
-react-dom@15.4.2:
+react-dom@15.4.2, react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -5811,7 +5828,7 @@ react-dom@15.4.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-react-drive-in@1.7.3:
+react-drive-in@1.7.3, react-drive-in@^1.7.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/react-drive-in/-/react-drive-in-1.7.3.tgz#eb0991701f9899cbbcbbd50c7fa9bb6fb9b29292"
   dependencies:
@@ -5840,7 +5857,7 @@ react-icon-base@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.0.4.tgz#b6b7662e8b009b270a4f0c213c222f5d6eca3b22"
 
-react-icons@2.2.3:
+react-icons@2.2.3, react-icons@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.3.tgz#3b4847923065ecb09f8ba7f7e422112de0195196"
   dependencies:
@@ -7091,7 +7108,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
 
-validate.js@0.11.1:
+validate.js@0.11.1, validate.js@^0.11.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/validate.js/-/validate.js-0.11.1.tgz#f51c3c6c4a56e6380a20a7eb104245037f2a540d"
 

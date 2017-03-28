@@ -67,6 +67,10 @@
     > p {
       font-weight: 600;
       margin-bottom: 9px;
+      text-overflow: ellipsis;
+      width: 150px;
+      overflow: hidden;
+      white-space: nowrap;
     }
     > a {
       text-decoration: none;

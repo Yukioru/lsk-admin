@@ -13,6 +13,7 @@ const propTypes = {
   items: PropTypes.array,
   onClick: PropTypes.func,
   onItemClick: PropTypes.func,
+  pageUrl: PropTypes.string,
   isSelected: PropTypes.bool,
 };
 
@@ -46,6 +47,11 @@ class TreeMenu extends Component {
       selectedMenuId: menu.id,
     });
     this.props.onItemClick(menu);
+  }
+  handleSelected(url) {
+    this.setState({
+      selectedUrl: url,
+    });
   }
 
   renderLabel() {
@@ -89,8 +95,7 @@ class TreeMenu extends Component {
       return (
         <ul className="treeview-menu">
           {this.props.items.map((item, i) => {
-            item.id = i + 1;
-            const isSelected = item.id === this.state.selectedMenuId;
+            const isSelected = item.url === this.props.pageUrl;
             return (
               <TreeSubMenu
                 key={i}
@@ -113,7 +118,8 @@ class TreeMenu extends Component {
       <li
         className={cx({
           treeview: true,
-          active: this.props.isSelected,
+          active: this.props.isSelected
+            || this.props.items.map(o => o.url).includes(this.props.pageUrl),
         })}
       >
         {this.renderLink()}
