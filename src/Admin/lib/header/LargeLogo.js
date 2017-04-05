@@ -1,15 +1,16 @@
 import React, { PropTypes } from 'react';
+import Link from 'lsk-general/General/Link';
 
 const propTypes = {
   children: PropTypes.node,
-  onClick: PropTypes.func,
+  href: PropTypes.string,
 };
 
-function LargeLogo({ children, onClick }) {
+function LargeLogo({ children, href }) {
   return (
-    <span className="logo-lg" onClick={onClick}>
+    <Link className="logo-lg" href={href}>
       {children}
-    </span>
+    </Link>
   );
 }
 

@@ -1,15 +1,16 @@
 import React, { PropTypes } from 'react';
+import Link from 'lsk-general/General/Link';
 
 const propTypes = {
   children: PropTypes.node,
-  onClick: PropTypes.func,
+  href: PropTypes.string,
 };
 
-function Logo({ children, onClick }) {
+function Logo({ children, href }) {
   return (
-    <a className="logo" style={{ cursor: 'pointer' }} onClick={onClick}>
+    <Link className="logo" href={href}>
       {children}
-    </a>
+    </Link>
   );
 }
 
