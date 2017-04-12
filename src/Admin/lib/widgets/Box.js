@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
-import MinusIcon from 'react-icons/lib/fa/minus';
-import CloseIcon from 'react-icons/lib/fa/close';
-import PlusIcon from 'react-icons/lib/fa/plus';
+import MinusIcon from 'react-icons2/fa/minus';
+import CloseIcon from 'react-icons2/fa/close';
+import PlusIcon from 'react-icons2/fa/plus';
 
 const propTypes = {
   title: PropTypes.string,

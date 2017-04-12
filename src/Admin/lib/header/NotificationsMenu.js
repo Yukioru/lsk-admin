@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import BellIcon from 'react-icons/lib/fa/bell';
+import BellIcon from 'react-icons2/fa/bell';
 
 import NotificationsMenuItem from './NotificationsMenuItem';
 

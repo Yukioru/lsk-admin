@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import CircleIcon from 'react-icons/lib/fa/circle';
+import CircleIcon from 'react-icons2/fa/circle';
 
 const propTypes = {
   image: PropTypes.string,

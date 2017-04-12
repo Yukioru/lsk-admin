@@ -1,5 +1,5 @@
 import React from 'react';
-import CircleIcon from 'react-icons/lib/fa/circle';
+import CircleIcon from 'react-icons2/fa/circle';
 
 import UserPanel from '../../../lib/sidebar/UserPanel';
 

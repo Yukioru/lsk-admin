@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import GroupIcon from 'react-icons/lib/fa/group';
+import GroupIcon from 'react-icons2/fa/group';
 
 const propTypes = {
   icon: PropTypes.string,

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import BarsIcon from 'react-icons/lib/fa/bars';
-import SlidersIcon from 'react-icons/lib/fa/sliders';
+import BarsIcon from 'react-icons2/fa/bars';
+import SlidersIcon from 'react-icons2/fa/sliders';
 
 const propTypes = {
   controlbarIcon: PropTypes.node,

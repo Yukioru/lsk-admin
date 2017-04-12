@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import TasksMenuItem from './TasksMenuItem';
-import FlagIcon from 'react-icons/lib/fa/flag';
+import FlagIcon from 'react-icons2/fa/flag';
 
 const propTypes = {
   items: PropTypes.array,

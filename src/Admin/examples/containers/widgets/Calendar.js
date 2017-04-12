@@ -1,6 +1,6 @@
 import React from 'react';
-import MinusIcon from 'react-icons/lib/fa/minus';
-import CloseIcon from 'react-icons/lib/fa/close';
+import MinusIcon from 'react-icons2/fa/minus';
+import CloseIcon from 'react-icons2/fa/close';
 
 
 export default function Calendar() {

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import HomeIcon from 'react-icons/lib/fa/home';
-import SlidersIcon from 'react-icons/lib/fa/sliders';
-import CakeIcon from 'react-icons/lib/fa/birthday-cake';
-import UserIcon from 'react-icons/lib/fa/user';
-import MailIcon from 'react-icons/lib/fa/envelope';
-import FileCodeIcon from 'react-icons/lib/fa/file-code-o';
-import DashboardIcon from 'react-icons/lib/fa/dashboard';
-import TrashIcon from 'react-icons/lib/fa/trash';
+import HomeIcon from 'react-icons2/fa/home';
+import SlidersIcon from 'react-icons2/fa/sliders';
+import CakeIcon from 'react-icons2/fa/birthday-cake';
+import UserIcon from 'react-icons2/fa/user';
+import MailIcon from 'react-icons2/fa/envelope';
+import FileCodeIcon from 'react-icons2/fa/file-code-o';
+import DashboardIcon from 'react-icons2/fa/dashboard';
+import TrashIcon from 'react-icons2/fa/trash';
 
 import LayoutWrapper from './lib/layout/LayoutWrapper';
 import PageWrapper from './lib/page/PageWrapper';

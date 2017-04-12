@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ClockIcon from 'react-icons/lib/fa/clock-o';
+import ClockIcon from 'react-icons2/fa/clock-o';
 
 const propTypes = {
   image: PropTypes.string,

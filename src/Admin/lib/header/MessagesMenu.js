@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import MessagesMenuItem from './MessagesMenuItem';
-import EnvelopeIcon from 'react-icons/lib/fa/envelope';
+import EnvelopeIcon from 'react-icons2/fa/envelope';
 
 const propTypes = {
   items: PropTypes.array,

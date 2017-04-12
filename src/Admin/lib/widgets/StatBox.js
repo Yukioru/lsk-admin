@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Right from 'react-icons/lib/fa/arrow-circle-right';
+import Right from 'react-icons2/fa/arrow-circle-right';
 import A from 'lsk-general/General/A';
 
 const propTypes = {

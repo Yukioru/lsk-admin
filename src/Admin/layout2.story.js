@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DashboardIcon from 'react-icons/lib/fa/dashboard';
+import DashboardIcon from 'react-icons2/fa/dashboard';
 
 import LayoutWrapper from './lib/layout/LayoutWrapper';
 import PageWrapper from './lib/page/PageWrapper';
