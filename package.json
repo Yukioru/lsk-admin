@@ -69,6 +69,7 @@
     "webpack-middleware": "1.5.1"
   },
   "scripts": {
+    "release": "npm publish",
     "clean": "babel-node tools/run clean",
     "copy": "babel-node tools/run copy",
     "bundle": "babel-node tools/run bundle",
