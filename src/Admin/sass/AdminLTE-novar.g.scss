@@ -15,15 +15,10 @@
 // @import "../../node_modules/han-css/index";
 */
 
- //@import "variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
-// @import "bootstrap-vars-custom";
-
 @import "~animate-sass/animate";
 /*//MISC
 //----
 */
-@import "variables";
 @import "mixins";
 @import "core";
 /*//COMPONENTS
@@ -33,13 +28,13 @@
 @import "sidebar-mini";
 @import "control-sidebar";
 @import "dropdown";
-@import "forms";
+//@import "forms";
 @import "progress-bars";
 @import "small-box";
 @import "boxes";
 @import "info-box";
 @import "timeline";
-@import "buttons";
+//@import "buttons";
 @import "callout";
 @import "alerts";
 @import "navs";
