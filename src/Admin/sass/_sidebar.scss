@@ -54,7 +54,7 @@
   padding: 10px;
   overflow: hidden;
   @include clearfix();
-  > .image > img {
+  > .image > div {
     width: 100%;
     max-width: 45px;
     height: auto;

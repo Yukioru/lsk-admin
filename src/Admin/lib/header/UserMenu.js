@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import Avatar from 'lsk-general/General/Avatar';
+
 import UserMenuBody from './UserMenuBody';
 import UserMenuLink from './UserMenuLink';
 import UserMenuFooter from './UserMenuFooter';
@@ -37,12 +39,21 @@ function UserMenu({
         data-toggle="dropdown"
         style={{ cursor: 'pointer' }}
       >
-        <img src={image} className="user-image" alt="User" />
+        <Avatar
+          className="user-image"
+          src={image}
+          title="User"
+          size={25}
+        />
         <span className="hidden-xs">{name}</span>
       </a>
       <ul className="dropdown-menu">
         <li className="user-header">
-          <img src={image} className="img-circle" alt="User" />
+          <Avatar
+            src={image}
+            title="User"
+            size={90}
+          />
           <p>
             {title}
             <small>{description}</small>

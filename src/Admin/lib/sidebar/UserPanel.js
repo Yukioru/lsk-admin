@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import CircleIcon from 'react-icons2/fa/circle';
+import Avatar from 'lsk-general/General/Avatar';
 
 const propTypes = {
   image: PropTypes.string,
@@ -25,8 +26,11 @@ function renderIcon(icon) {
 function UserPanel({ image, name, statusIcon, statusText }) {
   return (
     <div className="user-panel">
-      <div className="pull-left image">
-        <img src={image} className="img-circle" alt="User" />
+      <div className="pull-left image" style={{ display: 'table' }}>
+        <Avatar src={image} title="User"
+          style={{ width: '100%', height: 'auto' }}
+          innerStyle={{ width: '100%', height: 'auto' }}
+        />
       </div>
       <div className="pull-left info">
         <p>{name}</p>
