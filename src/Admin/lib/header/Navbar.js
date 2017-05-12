@@ -20,7 +20,7 @@ function renderIcon(icon) {
 }
 
 
-function Navbar({ controlbarIcon, children, controlbar }) {
+function Navbar({ controlbarIcon, children, controlbar, barsIcon }) {
   return (
     <nav className="navbar navbar-static-top" role="navigation">
       <a
@@ -30,7 +30,7 @@ function Navbar({ controlbarIcon, children, controlbar }) {
         style={{ cursor: 'pointer' }}
       >
         <span className="sr-only">Toggle navigation</span>
-        <BarsIcon />
+        {barsIcon || <BarsIcon />}
       </a>
       <div className="navbar-custom-menu">
         <ul className="nav navbar-nav">
