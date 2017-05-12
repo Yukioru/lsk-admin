@@ -30,7 +30,7 @@ const defaultProps = {
 function UserMenu({
   image, name, title, description,
   links, buttons,
-  onLinkClick, onButtonClick,
+  onLinkClick, onButtonClick, avatarSize,
 }) {
   return (
     <li className="dropdown user user-menu">
@@ -43,7 +43,7 @@ function UserMenu({
           className="user-image"
           src={image}
           title="User"
-          size={25}
+          size={avatarSize || 25}
         />
         <span className="hidden-xs">{name}</span>
       </a>
