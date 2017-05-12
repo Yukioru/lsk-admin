@@ -19,7 +19,7 @@
   width $transition-speed $transition-fn;
   @include transition-transform($transition-rule);
   @media (max-width: $screen-header-collapse) {
-    padding-top: 100px;
+    padding-top: 50px;
   }
   @media (max-width: $screen-xs-max) {
     @include translate(-$sidebar-width, 0);
