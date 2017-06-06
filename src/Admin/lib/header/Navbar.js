@@ -20,7 +20,7 @@ function renderIcon(icon) {
 }
 
 
-function Navbar({ controlbarIcon, children, controlbar, barsIcon }) {
+function Navbar({ leftMenu, controlbarIcon, children, controlbar, barsIcon }) {
   return (
     <nav className="navbar navbar-static-top" role="navigation">
       <a
@@ -32,6 +32,7 @@ function Navbar({ controlbarIcon, children, controlbar, barsIcon }) {
         <span className="sr-only">Toggle navigation</span>
         {barsIcon || <BarsIcon />}
       </a>
+      {leftMenu}
       <div className="navbar-custom-menu">
         <ul className="nav navbar-nav">
           {children}
