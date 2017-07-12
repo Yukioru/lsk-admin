@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ArrowLeft from 'react-icons2/fa/angle-left';
 import TreeSubMenu from './TreeSubMenu';
 import cx from 'classnames';
+import Link from 'lsk-general/General/Link';
 
 const propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
@@ -77,16 +78,17 @@ class TreeMenu extends Component {
   }
 
   renderLink() {
+    const { onClick, url, title, iconColor, icon } = this.props;
     return (
-      <a style={{ cursor: 'pointer' }} onClick={this.props.onClick}>
-        <i className={`text-${this.props.iconColor}`}>
-          {renderIcon(this.props.icon)}
+      <Link href={url} style={{ cursor: 'pointer' }} onClick={onClick}>
+        <i className={`text-${iconColor}`}>
+          {renderIcon(icon)}
         </i>
         <span className="pull-right-container">
           {this.renderLabel()}
         </span>
-        <span> {this.props.title} </span>
-      </a>
+        <span> {title} </span>
+      </Link>
     );
   }
 

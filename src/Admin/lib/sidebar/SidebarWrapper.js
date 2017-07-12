@@ -1,12 +1,18 @@
 import React, { PropTypes } from 'react';
+import cx from 'classnames';
 
 const propTypes = {
   children: PropTypes.node,
 };
 
-function SidebarWrapper({ children }) {
+function SidebarWrapper({ children, className }) {
   return (
-    <aside className="main-sidebar">
+    <aside
+      className={cx({
+        'main-sidebar': true,
+        [className]: className,
+      })}
+    >
       <section className="sidebar">
         {children}
       </section>

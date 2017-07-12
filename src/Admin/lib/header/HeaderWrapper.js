@@ -1,12 +1,18 @@
 import React, { PropTypes } from 'react';
+import cx from 'classnames';
 
 const propTypes = {
   children: PropTypes.node,
 };
 
-function HeaderWrapper({ children }) {
+function HeaderWrapper({ children, className }) {
   return (
-    <header className="main-header">
+    <header
+      className={cx({
+        'main-header': true,
+        [className]: className,
+      })}
+    >
       {children}
     </header>
   );

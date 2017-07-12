@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Link from 'lsk-general/General/Link';
 
 const propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
@@ -49,14 +50,15 @@ class TreeSubMenu extends Component {
   }
 
   render() {
+    const { onClick, url, icon, title } = this.props;
     return (
       <li className={this.props.isSelected ? 'active' : ''}>
-        <a style={{ cursor: 'pointer' }} onClick={this.props.onClick}>
+        <Link href={url} style={{ cursor: 'pointer' }} onClick={onClick}>
           {this.props.showIcon
-            ? renderIcon(this.props.icon)
+            ? renderIcon(icon)
             : ''
           }
-          <span> {this.props.title} </span>
+          <span> {title} </span>
           {this.props.items.length > 0
             ?
             <span className="pull-right-container">
@@ -64,7 +66,7 @@ class TreeSubMenu extends Component {
             </span>
             : ''
           }
-        </a>
+        </Link>
         {this.renderItems()}
       </li>
     );

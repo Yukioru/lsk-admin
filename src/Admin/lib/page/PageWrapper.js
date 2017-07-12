@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import cx from 'classnames';
 
 const propTypes = {
   children: PropTypes.node,
@@ -31,7 +32,12 @@ class PageWrapper extends Component {
 
   render() {
     return (
-      <div className="content-wrapper">
+      <div
+        className={cx({
+          'content-wrapper': true,
+          [this.props.className]: this.props.className,
+        })}
+      >
         {this.props.children}
       </div>
     );
