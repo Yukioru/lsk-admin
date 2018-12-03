@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Link from 'lsk-general/General/Link';
+import Link from '@lskjs/general/Link';
 
 const propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

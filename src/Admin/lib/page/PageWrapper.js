@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import cx from 'classnames';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   children: PropTypes.node,

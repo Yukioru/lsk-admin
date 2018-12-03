@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import CircleIcon from 'react-icons2/fa/circle';
 import Avatar from 'lsk-general/General/Avatar';
 

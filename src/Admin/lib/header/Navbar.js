@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import BarsIcon from 'react-icons2/fa/bars';
 import SlidersIcon from 'react-icons2/fa/sliders';
 

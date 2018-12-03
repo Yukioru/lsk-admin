@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import TasksMenuItem from './TasksMenuItem';
 import FlagIcon from 'react-icons2/fa/flag';

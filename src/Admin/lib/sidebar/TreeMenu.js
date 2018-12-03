@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ArrowLeft from 'react-icons2/fa/angle-left';
 import TreeSubMenu from './TreeSubMenu';
 import cx from 'classnames';

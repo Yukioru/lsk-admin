@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
-import Link from 'lsk-general/General/Link';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from '@lskjs/general/Link';
 
 const propTypes = {
   children: PropTypes.node,
